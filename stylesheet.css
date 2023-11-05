@@ -1,0 +1,501 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    color: #ededed;
+    background-color: black;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: blueviolet;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover {
+    color: blueviolet;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url(pic.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 40px 10% 0;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content p {
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-sci {
+    position: relative;
+    width: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 3px solid blueviolet;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    margin: 30px 15px 30px 0;
+}
+
+.home-sci a:hover {
+    background: blueviolet;
+    color: #081b29;
+    box-shadow: 0 0 20px blueviolet;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: blueviolet;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px black,
+        0 0 5px blueviolet
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 5px blueviolet,
+        0 0 25px blueviolet, 0 0 50px blueviolet,
+        0 0 100px blueviolet, 0 0 200px blueviolet
+}
+
+.about{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.about-img img{
+    padding-bottom: 10%;
+    max-width: 630px;
+    height: 700px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.about-text h2{
+    font-size: 100px;
+}
+
+.about-text h2 span{
+    color: blueviolet;
+}
+
+.about-text h4{
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+
+.about-text p{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+
+#MySkills{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+
+.sub-title{
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 40px;
+}
+
+.sub-title span{
+    color: blueviolet;
+}
+
+.container{
+    padding: 90px;
+}
+
+.Skills-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
+    grid-gap: 90px;
+    margin-top: 50px;
+}
+
+.Skills-list div{
+    background-color: transparent;
+    padding: 20px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px blueviolet,
+               1px 1px 40px blueviolet;
+}
+
+.Skills-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.Skills-list div h2{
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: blueviolet;
+}
+
+.Skills-list div a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.read{
+    display: inline-block;
+    padding: 12px;
+    background: blueviolet;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px black,
+        0 0 5px blueviolet;
+}
+
+.read:hover{
+    box-shadow: 0 0 5px blueviolet,
+        0 0 25px blueviolet, 0 0 50px blueviolet,
+        0 0 100px blueviolet, 0 0 200px blueviolet
+}
+
+.Skills-list div:hover{
+    transform: translateY(-10px);
+}
+
+.contact{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+    padding-left: 30px;
+    margin-top: 130px;
+}
+
+.contact-text h2{
+    font-size: 70px;
+    line-height: 1;
+    text-align: center;
+}
+
+.contact-text h2 span{
+    color: blueviolet;
+}
+
+.contact-text h4{
+    margin: 15px 0;
+    color: rgb(228,228,228);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contact-text p{
+    text-align: center;
+    font-size: 28px;
+}
+
+.contact-list{
+    margin-bottom: 3rem;
+}
+
+.contact-list li{
+    margin-bottom: 10px;
+    display: block;
+}
+
+.contact-list li{
+    margin-bottom: 10px;
+    display: block;
+    text-align: left;
+}
+
+.contact-list i{
+    display: inline-block;
+    color: blueviolet;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all .40s ease;
+}
+
+.contact-list li a:hover{
+    transform: scale(1.01) translateY(-5px);
+    color: blueviolet;
+}
+
+.contact-icons{
+    display: inline-block;
+    justify-content: center;
+    align-items: left;
+    width: 50px;
+    height: 50px;
+    gap: 5px;
+    border-radius: 100%;
+    font-size: 40px;
+    text-decoration: none;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    margin: 30px 15px 30px 0;
+}
+
+.contact-icons{
+    position: relative;
+    width: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-icons i:hover{
+    background: #000000;
+    color: #000;
+    box-shadow: 0 0 20px blueviolet;
+}
+
+.contact-form form{
+    position: relative;
+}
+
+.contact-form form input,form textarea{
+    border: none;
+    outline: none;
+    width: 80%;
+    padding: 18px;
+    background: #555557;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.contact-form textarea{
+    resize: none;
+    height: 180px;
+}
+
+.contact-form form send{
+    display: inline-block;
+    padding: 14px 60px;
+    background: blueviolet;
+    border-radius: 40px;
+    font-size: 18px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px blueviolet,
+        0 0 25px blueviolet;
+}
+
+.contact-form form .send:hover{
+    box-shadow: 0 0 5px blueviolet,
+        0 0 50px blueviolet, 0 0 50px blueviolet,
+        0 0 100px blueviolet, 0 0 200px blueviolet
+}
+
+.last-text p{
+    width: 100%;
+    text-align: center; 
+    color: black;
+    font-size: 25px;
+    padding: 25px 0;
+    background: rgb(163, 0, 244);
+    font-weight: 300;
+    margin-top: 70px;
+}
+
+.top{
+    position: fixed;
+    bottom: 2.1rem;
+    right: 2.1rem;
+}
+
+.top i{
+    color: #000000;
+    background: blueviolet;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+
+.main-text{
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+
+.main-text span{
+    color: blueviolet;
+}
+
+.main-text .Skills-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
+    grid-gap: 90px;
+    margin-top: 50px;
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
